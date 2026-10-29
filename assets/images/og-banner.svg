@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#EFE9D8"/>
+  <rect x="28" y="28" width="1144" height="574" fill="#F7F3E8" stroke="#286D96" stroke-width="2"/>
+  <rect x="44" y="44" width="1112" height="542" fill="none" stroke="#7FA9BC" stroke-width="1"/>
+
+  <path d="M60 60 L60 100 M60 60 L100 60" stroke="#164B68" stroke-width="3" fill="none"/>
+  <path d="M1140 60 L1140 100 M1140 60 L1100 60" stroke="#164B68" stroke-width="3" fill="none"/>
+  <path d="M60 570 L60 530 M60 570 L100 570" stroke="#164B68" stroke-width="3" fill="none"/>
+  <path d="M1140 570 L1140 530 M1140 570 L1100 570" stroke="#164B68" stroke-width="3" fill="none"/>
+
+  <circle cx="220" cy="315" r="72" fill="none" stroke="#286D96" stroke-width="4"/>
+  <circle cx="220" cy="315" r="56" fill="none" stroke="#7FA9BC" stroke-width="1.4"/>
+  <text x="220" y="332" text-anchor="middle" font-family="Georgia, 'Cormorant Garamond', serif" font-weight="600" font-size="52" fill="#164B68">RH</text>
+
+  <text x="360" y="300" font-family="Georgia, 'Cormorant Garamond', serif" font-weight="600" font-size="58" fill="#164B68">Renoahbusinesshub</text>
+  <text x="360" y="345" font-family="Georgia, serif" font-style="italic" font-size="26" fill="#6F7473">Insurance, documented properly</text>
+
+  <line x1="360" y1="380" x2="900" y2="380" stroke="#7FA9BC" stroke-width="1"/>
+</svg>

@@ -1,0 +1,242 @@
+/* ==========================================================================
+   PAPER-THEME.CSS
+   Bond-paper / non-judicial stamp paper visual system.
+   Defines the palette, paper texture, printed-document borders and the
+   "sheet" frame that every page is built inside.
+   ========================================================================== */
+
+:root {
+  /* -- Palette (from brief) ------------------------------------------- */
+  --paper:            #FFFFFF;
+  --paper-secondary:  #F0F5FA;
+  --ink-blue:         #245B88;
+  --dark-blue:        #0B1F3A;
+  --section-blue:     #12345A;
+  --heading-navy:     #0B1F3A;
+  --light-blue:       #F0F5FA;
+  --body-ink:         #263548;
+  --faded-blue:       #829BB5;
+  --muted-grey:       #475569;
+
+  /* -- Derived tones ----------------------------------------------------*/
+  --ink-blue-05:      rgba(36, 91, 136, 0.05);
+  --ink-blue-10:      rgba(36, 91, 136, 0.10);
+  --ink-blue-18:      rgba(36, 91, 136, 0.18);
+  --ink-blue-35:      rgba(36, 91, 136, 0.35);
+  --dark-blue-70:     rgba(11, 31, 58, 0.7);
+  --paper-shadow:    rgba(11, 31, 58, 0.14);
+  --grain-opacity:    0.05;
+
+  /* -- Type --------------------------------------------------------------*/
+  --font-display: 'Courier Prime', 'Courier New', monospace;
+  --font-body:    'Courier Prime', 'Courier New', monospace;
+
+  /* -- Layout tokens -------------------------------------------------- */
+  --sheet-max-width: 1180px;
+  --sheet-frame-pad: 12px;
+  --mobile-nav-height: 64px;
+  --header-height: 100px; /* fallback; measured precisely by JS on load/resize */
+}
+
+@media (prefers-color-scheme: dark) {
+  /* The document is intentionally a printed-paper artifact, not a themed
+     app surface — it keeps its ivory tone regardless of system theme,
+     the way a physical sheet of paper would. */
+}
+
+/* =================================================
+   Typewriter / printed-ink text rendering
+   Applied broadly so every page reads as struck by a typewriter onto
+   bond paper rather than a screen-native sans-serif UI.
+================================================= */
+
+body,
+input,
+textarea,
+select,
+button {
+  font-variant-ligatures: none;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Faint "faded ink" strike effect: a soft double-impression shadow that
+   reads as slightly uneven ribbon pressure, not a digital glow. */
+h1, h2, h3, h4,
+p, li, label, span, a, .eyebrow, .doc-seal,
+input, textarea, select, button {
+  text-shadow: 0.35px 0.35px 0 rgba(44, 38, 32, 0.12);
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: 0.03em;
+}
+
+/* =================================================
+   Base paper surface
+================================================= */
+
+html {
+  background: var(--paper);
+}
+
+body {
+  background-color: var(--paper);
+  color: #2c2620;
+  position: relative;
+  isolation: isolate;
+}
+
+/* Faint printed-paper grain, laid over the whole document.
+   Built from an SVG turbulence filter so no binary asset is required. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  pointer-events: none;
+  opacity: var(--grain-opacity);
+  mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix type='matrix' values='0 0 0 0 0.1  0 0 0 0 0.09  0 0 0 0 0.06  0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  background-repeat: repeat;
+}
+
+/* Very faint blue security-line wash across the page background,
+   suggesting printed guilloche lines without reproducing any
+   specific security mark. */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.5;
+  background:
+    repeating-linear-gradient(
+      115deg,
+      transparent 0px,
+      transparent 22px,
+      var(--ink-blue-10) 22px,
+      var(--ink-blue-10) 23px
+    ),
+    repeating-linear-gradient(
+      25deg,
+      transparent 0px,
+      transparent 34px,
+      rgba(111, 116, 115, 0.06) 34px,
+      rgba(111, 116, 115, 0.06) 35px
+    );
+}
+
+/* =================================================
+   The document sheet: the large printed-paper panel every page lives in
+================================================= */
+
+.paper-sheet {
+  max-width: var(--sheet-max-width);
+  margin: 0 auto;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      var(--faded-blue) 0px,
+      var(--faded-blue) 1.4px,
+      transparent 1.4px,
+      transparent 7px
+    ),
+    linear-gradient(var(--paper-secondary), var(--paper-secondary));
+  padding: var(--sheet-frame-pad);
+  box-shadow: 0 18px 50px -20px var(--paper-shadow), 0 2px 0 var(--ink-blue-18);
+}
+
+.paper-sheet__inner {
+  background: var(--paper);
+  border: 1.5px solid var(--ink-blue);
+  outline: 1px solid var(--ink-blue-35);
+  outline-offset: -6px;
+  min-height: 100%;
+  position: relative;
+}
+
+/* corner flourishes: quiet printed-document marks, not a copied emblem */
+.paper-sheet__inner::before,
+.paper-sheet__inner::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  top: 10px;
+  left: 10px;
+  border-top: 2px solid var(--ink-blue);
+  border-left: 2px solid var(--ink-blue);
+  pointer-events: none;
+}
+
+.paper-sheet__inner::after {
+  left: auto;
+  right: 10px;
+  border-left: none;
+  border-right: 2px solid var(--ink-blue);
+}
+
+.corner-bl,
+.corner-br {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  bottom: 10px;
+  pointer-events: none;
+}
+
+.corner-bl {
+  left: 10px;
+  border-bottom: 2px solid var(--ink-blue);
+  border-left: 2px solid var(--ink-blue);
+}
+
+.corner-br {
+  right: 10px;
+  border-bottom: 2px solid var(--ink-blue);
+  border-right: 2px solid var(--ink-blue);
+}
+
+/* =================================================
+   Printed hairline separators, used across header / sections / footer
+================================================= */
+
+.printed-rule {
+  border: none;
+  border-top: 1px solid var(--ink-blue);
+  position: relative;
+  margin: 0;
+}
+
+.printed-rule::after {
+  content: "";
+  display: block;
+  height: 1px;
+  margin-top: 3px;
+  background: var(--faded-blue);
+  opacity: 0.7;
+}
+
+.printed-rule--light {
+  border-top: 1px solid var(--ink-blue-35);
+}
+
+/* Stamp-style seal used decoratively (no emblem, purely geometric) */
+.doc-seal {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  border: 1.5px solid var(--ink-blue);
+  outline: 1px solid var(--faded-blue);
+  outline-offset: -5px;
+  display: grid;
+  place-items: center;
+  color: var(--ink-blue);
+  font-family: var(--font-display);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 1.15;
+  flex-shrink: 0;
+}

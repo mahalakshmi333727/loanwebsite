@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgAdvisor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#164B68"/>
+      <stop offset="100%" stop-color="#1D2A3A"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37"/>
+      <stop offset="100%" stop-color="#AA7C11"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgAdvisor)"/>
+  <circle cx="400" cy="180" r="100" fill="rgba(212,175,55,0.12)" stroke="url(#gold)" stroke-width="2"/>
+  
+  <g transform="translate(400, 180)">
+    <!-- Advisor Avatar Icon -->
+    <circle cx="0" cy="-20" r="35" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <path d="M -50,45 C -50,15 -25,0 0,0 C 25,0 50,15 50,45 Z" fill="none" stroke="#FFFFFF" stroke-width="4"/>
+    <path d="M -15,10 L 0,25 L 15,10" fill="none" stroke="url(#gold)" stroke-width="3.5" stroke-linecap="round"/>
+  </g>
+  
+  <rect x="180" y="320" width="440" height="54" rx="27" fill="rgba(255,255,255,0.08)" stroke="url(#gold)" stroke-width="1.5"/>
+  <text x="400" y="354" font-family="'Cinzel', Georgia, serif" font-size="20" font-weight="700" fill="#D4AF37" text-anchor="middle" letter-spacing="2">EXPERIENCED INSURANCE ADVISOR</text>
+  <text x="400" y="410" font-family="sans-serif" font-size="14" fill="#E0E6ED" text-anchor="middle" letter-spacing="1">12+ Years Dedicated Guidance · Licensed Advisor</text>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgEdu" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A3A56"/>
+      <stop offset="100%" stop-color="#0F2438"/>
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4DD0E1"/>
+      <stop offset="100%" stop-color="#00838F"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bgEdu)"/>
+  <circle cx="150" cy="100" r="160" fill="url(#cyanGrad)" opacity="0.08"/>
+  <circle cx="650" cy="380" r="200" fill="url(#cyanGrad)" opacity="0.06"/>
+  
+  <g transform="translate(400, 200)">
+    <!-- Graduation Cap & Growth Tree Concept -->
+    <circle cx="0" cy="0" r="85" fill="rgba(77,208,225,0.1)" stroke="url(#cyanGrad)" stroke-width="2.5"/>
+    <!-- Mortarboard / Graduation Cap -->
+    <path d="M -45,-15 L 0,-35 L 45,-15 L 0,5 Z" fill="url(#cyanGrad)"/>
+    <path d="M -25,-5 L -25,20 Q 0,35 25,20 L 25,-5" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round"/>
+    <path d="M 30,-10 L 38,15 L 34,30" fill="none" stroke="#E5C170" stroke-width="3" stroke-linecap="round"/>
+    <circle cx="34" cy="32" r="4" fill="#E5C170"/>
+  </g>
+  
+  <rect x="200" y="340" width="400" height="52" rx="26" fill="rgba(255,255,255,0.07)" stroke="url(#cyanGrad)" stroke-width="1.5"/>
+  <text x="400" y="373" font-family="'Cinzel', Georgia, serif" font-size="20" font-weight="700" fill="#4DD0E1" text-anchor="middle" letter-spacing="2">CHILD EDUCATION PLANNING</text>
+  <text x="400" y="425" font-family="sans-serif" font-size="14" fill="#B0BEC5" text-anchor="middle" letter-spacing="1">Funding Future Academic Success &amp; Dreams</text>
+</svg>

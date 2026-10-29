@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace https://YOUR-REAL-DOMAIN.COM with the real production domain before launch. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://YOUR-REAL-DOMAIN.COM/</loc>
+    <image:image>
+      <image:loc>https://YOUR-REAL-DOMAIN.COM/assets/images/life-insurance-family.jpg</image:loc>
+      <image:title>Family sitting together on a sofa at home, representing family life insurance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://YOUR-REAL-DOMAIN.COM/assets/images/term-insurance-father-child.jpg</image:loc>
+      <image:title>Father carrying his young son in a park, representing term insurance protection</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://YOUR-REAL-DOMAIN.COM/assets/images/health-insurance-doctor.jpg</image:loc>
+      <image:title>Doctor speaking with a family in a clinic, representing health insurance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://YOUR-REAL-DOMAIN.COM/assets/images/motor-insurance-car.jpg</image:loc>
+      <image:title>Silver car driving along a highway, representing car and motor insurance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://YOUR-REAL-DOMAIN.COM/assets/images/two-wheeler-insurance-scooter.jpg</image:loc>
+      <image:title>Rider on a scooter on a city road, representing two-wheeler insurance</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://YOUR-REAL-DOMAIN.COM/assets/images/business-insurance-store.jpg</image:loc>
+      <image:title>Shop owner in her store beside a Comprehensive Business Insurance Protection sign</image:title>
+    </image:image>
+  </url>
+</urlset>

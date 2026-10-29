@@ -1,0 +1,27 @@
+{
+  "name": "Renoahbusinesshub",
+  "short_name": "Renoahbusinesshub",
+  "description": "Life, health, motor, general and business insurance guidance and consultation from Renoahbusinesshub.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "lang": "en-IN",
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "icons": [
+    {
+      "src": "/assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

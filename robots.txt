@@ -1,0 +1,10 @@
+# robots.txt for Renoahbusinesshub
+# Replace https://YOUR-REAL-DOMAIN.COM with the real production domain before launch.
+
+User-agent: *
+Allow: /
+
+# CSS, JavaScript and images are intentionally NOT blocked so Google can render the page.
+
+Sitemap: https://YOUR-REAL-DOMAIN.COM/sitemap.xml
+Sitemap: https://YOUR-REAL-DOMAIN.COM/sitemap-images.xml

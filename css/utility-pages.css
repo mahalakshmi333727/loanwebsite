@@ -1,0 +1,52 @@
+/* =================================================
+   Utility pages (404, 403, cookie policy)
+   Small additions on top of the existing theme files. These pages load no
+   JavaScript, so the navigation is always visible and nothing is hidden
+   waiting for a reveal animation.
+================================================= */
+
+.utility-page .primary-nav { display: block; }
+.utility-page .primary-nav ul { flex-wrap: wrap; }
+.utility-page .nav-toggle { display: none; }
+
+@media (max-width: 900px) {
+  .utility-page .site-header { flex-wrap: wrap; gap: 10px 16px; }
+  .utility-page .primary-nav { display: block; width: 100%; }
+  .utility-page .primary-nav ul { gap: 6px 16px; padding: 0; }
+}
+
+.utility-hero {
+  text-align: center;
+  padding: clamp(40px, 8vw, 90px) 0 clamp(24px, 4vw, 48px);
+}
+.utility-hero__code {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 16vw, 9rem);
+  line-height: 1;
+  font-weight: 700;
+  color: var(--ink-blue);
+  letter-spacing: 0.04em;
+  margin: 0 0 6px;
+}
+.utility-hero h1 { margin-bottom: 14px; }
+.utility-hero p { max-width: 52ch; margin: 0 auto 26px; }
+.utility-hero .btn-row { justify-content: center; }
+
+.utility-page .content > * { min-width: 0; width: 100%; box-sizing: border-box; }
+
+.policy {
+  max-width: 78ch;
+  margin: 0 auto;
+  padding: clamp(24px, 5vw, 56px) 0;
+}
+.policy h1 { margin-bottom: 8px; }
+.policy h2 { font-size: clamp(1.15rem, 2vw, 1.4rem); margin: 1.8em 0 0.5em; }
+.policy ul { padding-left: 1.2em; }
+.policy li { margin-bottom: 0.5em; }
+.policy__updated { color: var(--muted-grey); margin-bottom: 1.4em; }
+.policy table { width: 100%; border-collapse: collapse; margin: 1em 0; font-size: 0.95rem; }
+.policy th, .policy td { border: 1px solid var(--faded-blue); padding: 8px 10px; text-align: left; vertical-align: top; }
+.policy th { color: #fff; background: var(--section-blue); }
+.policy td { color: var(--body-ink); }
+.policy tbody tr:nth-child(even) { background: var(--light-blue); }
+.policy .table-wrap { overflow-x: auto; max-width: 100%; }
